@@ -15,6 +15,7 @@ class CreateApp(tornado.web.Application):
         handlers = [
             (r'/', site.IndexHandler),
             (r'/login', user.LoginHandler),
+            (r'/video',site.CourseHandler),
         ]
         settings = dict(
             template_path=os.path.join(os.path.dirname(__file__), 'templates'),
